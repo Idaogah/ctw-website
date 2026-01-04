@@ -1,0 +1,354 @@
+/* ===============================
+   STICKY GLOBAL HEADER
+================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(135deg, #1e3a8a, #312e81);
+  padding: 0.3rem 1.5rem; /* reduced height */
+  color: #ffffff;
+}
+
+
+
+/* Layout */
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* Ministry Logo Profile - slightly smaller than pastor's profile */
+.header-logo-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;      /* circular style like profile */
+  overflow: hidden;
+  width: 70px;             /* slightly smaller than pastor */
+  height: 70px;            /* slightly smaller than pastor */
+  border: 2px solid #ffffff;
+}
+
+.header-logo-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Logo */
+.header-logo img {
+  height: 48px;
+  width: auto;
+}
+
+/* Center text */
+.header-center {
+  text-align: center;
+}
+
+.header-center h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.header-center p {
+  margin: 0.15rem 0 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Right section */
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+}
+
+.header-contact .email {
+  color: #e0e7ff;
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.header-contact .email:hover {
+  text-decoration: underline;
+}
+
+/* Social icons */
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+/* Subtle divider */
+.header-divider {
+  height: 1.5px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+  margin-top: 0.75rem;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .header-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .header-logo {
+    justify-self: center;
+  }
+
+  .header-contact {
+    justify-content: center;
+  }
+}
+
+
+/* ===============================
+   STICKY NAV BAR
+================================ */
+
+.main-nav {
+  position: sticky;
+  top: 80px; /* same height as header */
+  z-index: 998;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Center menu items */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0.8rem 1rem;
+}
+
+/* Links */
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1f2937;
+  position: relative;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.main-nav a:hover {
+  color: #1e3a8a;
+}
+
+/* Subtle underline animation */
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #1e3a8a;
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+/* ===============================
+   GLOBAL STYLES
+================================ */
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+header {
+  background: linear-gradient(135deg, #1e3a8a, #312e81);
+  color: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+nav {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.75rem;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+h2 { margin-bottom: 1rem; }
+
+.card { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.06); }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.5rem; }
+.highlight { background-color: #eef2ff; padding: 1.5rem; border-left: 6px solid #1e3a8a; border-radius: 8px; margin-top: 1.5rem; }
+footer { background-color: #111827; color: #d1d5db; text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+
+.profile { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+.profile img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #1e3a8a; }
+
+/* ===============================
+   SLIDER STYLES (IMAGES + VIDEOS)
+================================ */
+.slider-container { position: relative; max-width: 100%; margin: auto; overflow: hidden; border-radius: 16px; }
+.slider { display: flex; transition: transform 0.6s ease-in-out; }
+.slide { min-width: 100%; height: 420px; position: relative; background: #000; }
+.slide img, .slide video { width: 100%; height: 100%; object-fit: cover; }
+
+/* Overlay caption */
+.slide-caption { position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 1.5rem; background: rgba(0,0,0,0.55); color: #fff; font-size: 1.1rem; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+.slide:hover .slide-caption { opacity: 1; }
+
+/* Prev / Next buttons */
+.slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: #fff; border: none; padding: 0.6rem 0.9rem; font-size: 1.4rem; cursor: pointer; border-radius: 50%; opacity: 0.6; }
+.slider-btn:hover { opacity: 1; }
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* ===============================
+   WHATSAPP FLOAT
+================================ */
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: #fff; font-size: 1.6rem; padding: 0.7rem 0.85rem; border-radius: 50%; text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,0.25); z-index: 1000; }
+
+/* Smooth pause visual cue */
+.slider-container:hover .slider-btn {
+  opacity: 1;
+}
+
+.slide-caption {
+  pointer-events: none; /* So video can receive clicks */
+}
+
+/* Vision and Mission Cards adjust */
+.main-content {
+  padding-top: 10 px; /* adjust based on your header height */
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  flex: 1 1 300px; /* each card is at least 300px wide and grows */
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+
+/* ===============================
+   PLAY ICON OVERLAY
+================================ */
+
+/* Play overlay */
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  color: #fff;
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay only when hovering AND video not playing */
+.slide:hover:not([data-playing="true"]) .play-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Pulse ring */
+.play-overlay::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.7);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}

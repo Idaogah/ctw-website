@@ -1,0 +1,47 @@
+<! =========================
+   FILE: partnership.html
+   ========================= */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partnership | CTW</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="site-header">
+
+
+<section>
+  <h2>Why Partner With Us</h2>
+  <p>
+    Your partnership helps advance evangelism, support persecuted Christians, and provide relief to Internally Displaced Persons and the less privileged.
+  </p>
+
+  <div class="card">
+    <p><strong>Account Name:</strong> Community of True Worshippers</p>
+    <p><strong>Union Bank of Nigeria</strong><br />Tithes & Offerings: <strong>0225272636</strong></p>
+    <p><strong>United Bank for Africa (UBA)</strong><br />Crusade Account: <strong>1027390806</strong><br />Project Account: <strong>1027390734</strong></p>
+  </div>
+</section>
+
+<footer>
+  © Community of True Worshippers
+</footer>
+
+<a href="https://wa.me/2347066908081" class="whatsapp-float">💬</a>
+
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('site-header').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

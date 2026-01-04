@@ -1,0 +1,78 @@
+<!
+/* =========================
+   FILE: about.html
+   ========================= */
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | CTW</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky header/nav -->
+  <div id="site-header"></div>
+
+
+<section class="page-intro">
+  <h1>ABOUT THE MINISTRY</h1>
+
+  <p>
+    Community of True Worshippers is a Christian Ministry empowered by God with the mandate
+    to raise and build Righteous and Care Giving Believers who worship God in Spirit and Truth.
+  </p>
+
+  <p>
+    The Ministry's Headquarters is located at Oju, Benue State. At present, the Church Arm of
+    the Ministry holds her services at NURTW Conference Hall, Central Business District, Oju,
+    Benue State, Nigeria.
+  </p>
+</section>
+
+
+  <!-- Main content -->
+  <section class="main-content">
+    <p>
+      Community of True Worshippers is a Christian Ministry empowered by God.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Vision</h3>
+        <p>A world of Christians after God’s own heart.</p>
+      </div>
+      <div class="card">
+        <h3>Mission</h3>
+        <p>Raising a global community of true worshippers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Resident Pastor</h2>
+    <div class="profile">
+      <img src="images/pastor-placeholder.jpg">
+      <div>
+        <h3>Pastor Moses Ogah</h3>
+        <p>Pastor Moses Ogah serves as the Resident Pastor...</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>© Community of True Worshippers</footer>
+  <a href="https://wa.me/2347066908081" class="whatsapp-float">💬</a>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('site-header').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
