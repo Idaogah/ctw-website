@@ -1,0 +1,28 @@
+name: Deploy CTW Website
+
+on:
+  push:
+    branches:
+      - main   # deploy on every push to main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repo
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: (Optional) If you have a build step (like SASS, JS bundler), do it here
+    # - name: Build site
+    #   run: |
+    #     npm install
+    #     npm run build
+
+    # Step 3: Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v6
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./   # root folder where your site files are
