@@ -115,6 +115,18 @@
   margin-top: 0.6rem;
 }
 
+
+/* Social icons in footer */
+  .social-icons-footer {
+  display: none;             /* hidden by default (desktop) */
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;         /* optional: bigger icons */
+}
+
+
 /* ===============================
    RESPONSIVE
 ================================ */
@@ -132,10 +144,10 @@
     display: none;
   }
 
-  /* Hide pastor image on small screens */
-  .header-pastor img {
-    display: none;
+  .social-icons-footer {
+    display: flex;
   }
+
 }
 
 
