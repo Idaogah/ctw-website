@@ -131,6 +131,11 @@
   .header-pastor {
     justify-content: center;
   }
+
+  /* Hide pastor image on small screens */
+  .header-pastor img {
+    display: none;
+  }
 }
 
 
